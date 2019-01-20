@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpackPlugin = require('dotenv-webpack');
+const project = require('./package');
 
 const outputDirectory = 'dist';
 
@@ -32,7 +33,7 @@ module.exports = {
         new HtmlWebpackPlugin(
             {
                 template: path.join(__dirname, '/src/client/html/index.html'),
-                title: "title"
+                title: "Simple Chater " + project.version
             }
         ),
         new CopyWebpackPlugin([
