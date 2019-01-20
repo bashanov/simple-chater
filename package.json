@@ -1,0 +1,60 @@
+{
+  "name": "simple-chater",
+  "version": "1.0.0",
+  "description": "Simple chat app written on nodejs",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "nodemon ./src/server/http-server.js",
+    "dev-socket-server": "nodemon ./src/server/socket-server.js",
+    "dev-watch": "webpack --watch",
+    "build": "webpack --mode production",
+    "start-prod": "nohup node dist/http-server.js > http.server.log & && nohup node dist/socket-server.js > socket.server.log &"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bashanov/simple-chater.git"
+  },
+  "keywords": [
+    "chat",
+    "reactjs",
+    "react.js",
+    "nodejs",
+    "socket-io",
+    "socket.io",
+    "webpack",
+    "babel",
+    "express"
+  ],
+  "author": "Bashanov Evgeny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bashanov/simple-chater/issues"
+  },
+  "homepage": "https://github.com/bashanov/simple-chater#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "classnames": "^2.2.6",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.4",
+    "css-loader": "^1.0.0",
+    "dotenv-webpack": "^1.5.7",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.5",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

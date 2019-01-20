@@ -1,0 +1,107 @@
+.chat {
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.chat .chat-board {
+    min-height: 200px;
+    max-height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.chat .chat-form {
+    min-height: 100px;
+    max-height: 30vh;
+}
+
+.chat .chat-board ul {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.chat .chat-board ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.chat .chat-board ul.info {
+    text-align: center;
+    color: grey;
+}
+
+.chat .chat-board ul.info .time {
+    display: none;
+}
+
+.chat .chat-board ul.message li {
+    position: relative;
+    float: left;
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 30px;
+    margin-bottom: 3px;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #eee;
+    clear: both;
+}
+
+.chat .chat-board ul.message li:not(:last-child) > .time {
+    display: none;
+}
+
+.chat .chat-board ul.message {
+    margin-bottom: 20px;
+}
+
+.chat .chat-board ul.message.my li {
+    float: right;
+    background: #0084ff;
+    color: #fff;
+}
+
+/** Right bubbles **/
+.chat .chat-board ul.message.my li:not(:only-child):first-child {
+    border-bottom-right-radius: 5px;
+}
+
+.chat .chat-board ul.message.my li + li {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.chat .chat-board ul.message.my li:not(:only-child):last-child {
+    border-bottom-right-radius: 30px;
+}
+
+.chat .chat-board ul.message .time {
+    text-align: right;
+    width: 100vw;
+    position: absolute;
+    color: grey;
+    right: 0;
+    margin-top: 30px;
+    font-size: 11px;
+}
+
+/** Left bubbles **/
+.chat .chat-board ul.message:not(.my) li:not(:only-child):first-child {
+    border-bottom-left-radius: 5px;
+}
+
+.chat .chat-board ul.message:not(.my) li + li {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.chat .chat-board ul.message:not(.my) li:not(:only-child):last-child {
+    border-bottom-left-radius: 30px;
+}
+
+.chat .chat-board ul.message:not(.my) .time {
+    left: 0;
+    text-align: left;
+}
+
